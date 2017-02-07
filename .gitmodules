@@ -1,0 +1,3 @@
+[submodule "sources/vendor/Semantic-UI"]
+	path = sources/vendor/Semantic-UI
+	url = git@github.com:Semantic-Org/Semantic-UI.git

@@ -1,0 +1,45 @@
+#about-hapkido {
+	figure {
+		float: left;
+		margin: 0;
+		max-width: 600px;
+		overflow: hidden;
+		position: relative;
+		width: 50%;
+        &:after {
+        	background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%),
+        	linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%);
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+		img {
+			@include size(600px, auto);
+		}
+    }
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+	#about-hapkido {
+		figure img {
+			@include size(100%, auto);
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	#about-hapkido {
+		figure {
+		    float: none;
+		    margin: 0 auto;
+			width: 100%;
+		}
+		.content-text-right{
+			width: 100%;
+		}
+	}
+}

@@ -1,0 +1,138 @@
+body {
+    @include font($white, $default-font, 14px, normal, normal);
+    background: #000;
+    color: $off-white;
+}
+
+#container {
+    margin: 0 auto;
+	max-width: 1400px;
+    position: relative;
+}
+
+.content {
+	overflow: hidden;
+	padding: 10px 50px 90px;
+	position: relative;
+	header {
+		margin-bottom: 15px;
+		&.header-centered {
+			text-align: center;
+			small {
+				margin-bottom: 0;
+			}
+		}
+		.icon {
+			@include size(50px, auto);
+		}
+		small {
+			margin: 20px 0 10px;
+		}
+	}
+	p {
+		position: relative;
+	}
+	.content-text-right {
+		float: right;
+		width: 45%;
+	}
+}
+
+// forms
+form {
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	textarea {
+		background: $off-black;
+		border: 1px solid #111;
+		padding: 15px;
+		&.error {
+			background: $red;
+			font-weight: 700;
+			transition: all 1s;
+		}
+		&:focus {
+			background: $light-black;
+			outline: none;
+			transition: 1s;
+		}
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="password"] {
+		@include size(100%, 40px);
+	}
+	textarea {
+		@include size(100%, 145px);
+	}
+
+	input[type=submit],
+	button {
+		background: none;
+		border: 1px solid $light-gold-off;
+		border-radius: 3px;
+		color: $light-gold-off;
+		font-size: 14px;
+		padding: 10px 35px;
+		text-transform: uppercase;
+		transition: 0.5s;
+		&:hover {
+			border-color: lighten($light-gold-off, 40%);
+			color: lighten($light-gold-off, 10%);
+			transition: 0.5s;
+		}
+	}
+}
+
+
+// tipography
+h1 {
+	@include font($white, $title-font, 34px, normal, 700);
+	margin: 0;
+	text-transform: uppercase;
+	text-shadow: -2px 1px $blue;
+}
+
+h2 {
+	@include font($white, $secondary-title-font, 40px, normal, normal);
+	margin: 0;
+}
+
+h3 {
+	@include font($light-gold, $title-font, 18px, normal, 700);
+	letter-spacing: 1.5px;
+	margin: 0;
+	text-transform: uppercase !important;
+}
+
+small {
+	color: $light-gold-off;
+    display: block;
+    font-size: 14px;
+    margin: 20px 0;
+    text-transform: uppercase;
+    &:before,
+    &:after {
+    	@include size(15px, 1px);
+	    background: $light-gold-off;
+    	content: "";
+	    display: inline-block;
+	    margin: 0 10px;
+	    vertical-align: middle;
+    }
+}
+
+a {
+	color: $light-gold;
+	&:hover {
+		color: $light-gold;
+	}
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+	.content {
+		padding: 10px 50px 90px 20px;
+	}
+}

@@ -1,0 +1,35 @@
+// for font
+@mixin font ($color, $family, $size, $style, $weight) {
+    font: {
+        family: $family;
+        size: $size;
+        style: $style;
+        weight: $weight;
+    }
+    color: $color;
+}
+
+// for width-height
+@mixin size ($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+// default gradient
+@mixin defaultGradient {
+	background: #8c0e00;
+	background: -moz-linear-gradient(-45deg, #8c0e00 0%, #004e91 100%);
+	background: -webkit-linear-gradient(-45deg, #8c0e00 0%,#004e91 100%);
+	background: linear-gradient(135deg, #8c0e00 0%,#004e91 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c0e00', endColorstr='#004e91',GradientType=1 );
+}
+
+// gradient with variables
+@mixin gradient ($startColor, $endColor) {
+  background-color: $startColor;
+  background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background: -webkit-linear-gradient(top, $startColor, $endColor);
+  background: -moz-linear-gradient(top, $startColor, $endColor);
+  background: -ms-linear-gradient(top, $startColor, $endColor);
+  background: -o-linear-gradient(top, $startColor, $endColor);
+};

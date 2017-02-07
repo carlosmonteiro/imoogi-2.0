@@ -1,0 +1,6 @@
+npm install --save-dev gulp
+npm install gulp-sass --save-dev
+npm install --save-dev gulp-imagemin
+npm install gulp-concat
+npm install gulp-minify-css
+npm install gulp-webserver

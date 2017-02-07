@@ -1,0 +1,9 @@
+footer {
+	background: linear-gradient(184deg,transparent 67%, $red 100%, $light-red 100%),
+	            linear-gradient(176deg,transparent 67%, $blue 100%, $light-blue 100%),
+	            url(../build/logo-alternate.svg) top center/45px no-repeat;
+    font-size: 12px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    text-align: center;
+}

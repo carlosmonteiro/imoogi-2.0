@@ -1,0 +1,32 @@
+#about-team {
+	figure {
+		margin: 0 auto !important;
+		position: relative;
+		width: 600px;
+        &:after {
+        	background: linear-gradient(to left, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%),
+        	linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 2%,rgba(0,0,0,0) 30%,rgba(0,0,0,0) 80%,rgba(0,0,0,1) 100%);
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+		img {
+			@include size(600px, auto);
+		}
+    }
+}
+
+// RESPONSIVE
+@media (max-width: 768px) {
+    #about-team {
+        figure {
+        	width: 100%;
+	        img {
+	            @include size(100%, auto);
+	        }
+	    }
+    }
+}

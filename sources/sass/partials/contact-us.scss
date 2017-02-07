@@ -1,0 +1,87 @@
+#contact {
+	form {
+		@include size(50%, auto);
+		float: left;
+		input[type=submit] {
+			float: right;
+			margin: 10px 0 0;
+		}
+	}
+	#more-informations {
+		float: left;
+		margin-left: 20px;
+		h3 {
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 25px;
+			i {
+				color: $white;
+				font-size: 20px;
+				margin-right: 10px;
+			}
+			a {
+				color: $white;
+				font-size: 16px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			span {
+				display: block;
+				font-size: 12px;
+			}
+		}
+		.telephone {
+			padding-left: 34px;
+    		line-height: 20px;
+    		i {
+    			left: 0;
+    			position: absolute;
+    			top: 14px;
+    		}
+    	}
+    	.social-networks {
+    		color: $off-black;
+    		font-size: 35px;
+    		margin-right: 35px;
+    	}
+    	a.social-networks {
+    		color: $white;
+    		transition: all 0.5s;
+    		&:hover {
+    			i {
+	    			color: $off-white;
+	    			transition: all 0.5s;
+	    		}
+    		}
+    	}
+    	.coming-soon {
+    		position: relative;
+    		&:after {
+    			content: "Em breve";
+			    bottom: -15px;
+			    color: $off-white;
+			    font-size: 12px;
+			    left: -10px;
+			    line-height: 12px;
+			    position: absolute;
+			    text-align: center;
+			    white-space: nowrap;
+    		}
+    	}
+	}
+}
+
+
+// RESPONSIVE
+@media (max-width: 768px) {
+	#contact {
+		form {
+			width: 100%;
+		}
+	}
+	#more-informations {
+		margin: 40px 0 0 !important;
+	}
+}

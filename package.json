@@ -1,0 +1,26 @@
+{
+  "name": "imoogi",
+  "version": "1.0.0",
+  "description": "Site Imoogi",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/julianereisb/siteimoogi.git"
+  },
+  "author": "Juliane Reis",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/julianereisb/siteimoogi#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-install": "^0.6.0",
+    "gulp-sass": "^2.3.2",
+    "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "gulp-install": "^0.6.0"
+  }
+}
